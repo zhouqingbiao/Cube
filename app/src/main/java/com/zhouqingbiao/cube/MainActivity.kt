@@ -10,10 +10,19 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        // 初始化就随机显示图片
-        findViewById<ImageView>(R.id.imageViewF2L).setImageResource(tempsF2l.random())
-        findViewById<ImageView>(R.id.imageViewOLL).setImageResource(tempsOLL.random())
-        findViewById<ImageView>(R.id.imageViewPLL).setImageResource(tempsPLL.random())
+
+        // 初始化就随机显示图片并从list中移除
+        val tempF2L = tempsF2L.random()
+        findViewById<ImageView>(R.id.imageViewF2L).setImageResource(tempF2L)
+        tempsF2L.remove(tempF2L)
+
+        val tempOLL = tempsOLL.random()
+        findViewById<ImageView>(R.id.imageViewOLL).setImageResource(tempOLL)
+        tempsOLL.remove(tempOLL)
+
+        val tempPLL = tempsPLL.random()
+        findViewById<ImageView>(R.id.imageViewPLL).setImageResource(tempPLL)
+        tempsPLL.remove(tempPLL)
     }
 
     // F2L
@@ -67,20 +76,20 @@ class MainActivity : AppCompatActivity() {
         R.mipmap.f2l9
     )
 
-    private var tempsF2l = imagesF2L.toMutableList()
+    private var tempsF2L = imagesF2L.toMutableList()
     fun randomImageF2L(view: View) {
         val imageView = findViewById<ImageView>(R.id.imageViewF2L)
 
-        val temp = tempsF2l.random()
+        val temp = tempsF2L.random()
 
         imageView.setImageResource(temp)
 
-        tempsF2l.remove(temp)
+        tempsF2L.remove(temp)
 
-        println(tempsF2l.size)
+        println(tempsF2L.size)
 
-        if (tempsF2l.size == 0) {
-            tempsF2l = imagesF2L.toMutableList()
+        if (tempsF2L.size == 0) {
+            tempsF2L = imagesF2L.toMutableList()
             findViewById<TextView>(R.id.textView).text = "F2L一组训练完毕！"
         }
     }
