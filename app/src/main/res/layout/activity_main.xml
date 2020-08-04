@@ -22,23 +22,23 @@
         android:id="@+id/f2lImageView"
         android:layout_width="128dp"
         android:layout_height="128dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginTop="16dp"
         android:contentDescription="@string/f2l"
         android:onClick="f2lImageRandom"
-        app:layout_constraintBottom_toTopOf="@+id/ollImageView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/ollImageView"
         android:layout_width="128dp"
         android:layout_height="128dp"
+        android:layout_marginTop="128dp"
         android:contentDescription="@string/oll"
         android:onClick="ollImageRandom"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/f2lImageView" />
 
     <ImageView
         android:id="@+id/pllImageView"
@@ -55,9 +55,9 @@
         android:id="@+id/f2lFormulasTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:textColor="#42A5F5"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/ollImageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/f2lImageView" />
@@ -66,9 +66,9 @@
         android:id="@+id/ollFormulasTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:textColor="#42A5F5"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/pllImageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ollImageView" />
@@ -77,9 +77,9 @@
         android:id="@+id/pllFormulasTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:textColor="#42A5F5"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/noticeTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pllImageView" />
@@ -88,8 +88,8 @@
         android:id="@+id/noticeTextView"
         android:layout_width="256dp"
         android:layout_height="32dp"
-        android:layout_marginTop="32dp"
-        android:gravity="center|top"
+        android:layout_marginTop="64dp"
+        android:gravity="center"
         android:textColor="@color/colorRed"
         android:textSize="18sp"
         android:typeface="monospace"

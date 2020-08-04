@@ -62,6 +62,18 @@ class MainActivity : AppCompatActivity() {
     // F2L图片资源
     private val f2lImages = listOf(
         R.mipmap.f2l1,
+        R.mipmap.f2l2,
+        R.mipmap.f2l2_1,
+        R.mipmap.f2l2_2,
+        R.mipmap.f2l3,
+        R.mipmap.f2l3_1,
+        R.mipmap.f2l3_2,
+        R.mipmap.f2l4,
+        R.mipmap.f2l5,
+        R.mipmap.f2l6,
+        R.mipmap.f2l7,
+        R.mipmap.f2l8,
+        R.mipmap.f2l9,
         R.mipmap.f2l10,
         R.mipmap.f2l11,
         R.mipmap.f2l12,
@@ -72,7 +84,6 @@ class MainActivity : AppCompatActivity() {
         R.mipmap.f2l17,
         R.mipmap.f2l18,
         R.mipmap.f2l19,
-        R.mipmap.f2l2,
         R.mipmap.f2l20,
         R.mipmap.f2l21,
         R.mipmap.f2l22,
@@ -83,9 +94,6 @@ class MainActivity : AppCompatActivity() {
         R.mipmap.f2l27,
         R.mipmap.f2l28,
         R.mipmap.f2l29,
-        R.mipmap.f2l2_1,
-        R.mipmap.f2l2_2,
-        R.mipmap.f2l3,
         R.mipmap.f2l30,
         R.mipmap.f2l31,
         R.mipmap.f2l32,
@@ -98,150 +106,108 @@ class MainActivity : AppCompatActivity() {
         R.mipmap.f2l37,
         R.mipmap.f2l38,
         R.mipmap.f2l39,
-        R.mipmap.f2l3_1,
-        R.mipmap.f2l3_2,
-        R.mipmap.f2l4,
         R.mipmap.f2l40,
-        R.mipmap.f2l41,
-        R.mipmap.f2l5,
-        R.mipmap.f2l6,
-        R.mipmap.f2l7,
-        R.mipmap.f2l8,
-        R.mipmap.f2l9
+        R.mipmap.f2l41
     )
 
     // F2L公式资源
     private val f2lFormulas = mapOf(
-        R.mipmap.f2l1 to "(R U'U'R'U)2 y'(R'U'R)\n" +
-                "\n" +
+        R.mipmap.f2l1 to "(R U2' R' U)2 y'(R'U'R)\n" +
                 "如果左前为空槽可做\n" +
-                "D (R' F R F')(R U' R') D'\n" +
-                "\n" +
+                "D (R' F R F') (R U' R') D'\n" +
                 "如果右后为空槽可做\n" +
-                "D' (R' F R F')(R U' R') D",
-        R.mipmap.f2l10 to "y'(R' U R) U' (R' U R)\n" +
-                "\n" +
+                "D' (R' F R F') (R U' R') D",
+        R.mipmap.f2l2 to "U (R U' R') U' (F' U F)",
+        R.mipmap.f2l2_1 to "F r U r' F'\n" +
+                "或 U' D F' U F D'",
+        R.mipmap.f2l2_2 to "U' D' F' U F D",
+        R.mipmap.f2l3 to "U' (F' U F) U (R U' R')",
+        R.mipmap.f2l3_1 to "U D R U' R' D'",
+        R.mipmap.f2l3_2 to "U D' R U' R' D",
+        R.mipmap.f2l4 to "(R U' R') U' (R U R') U2 (R U' R')\n" +
+                "如果左前为空槽可做\n" +
+                "u' (R U' R' U) (R U' R') u\n" +
+                "如果右后为空槽可做\n" +
+                "u (R U' R' U) (R U' R') u'",
+        R.mipmap.f2l5 to "(R U' R' U') (R U' R') U (F' U' F)",
+        R.mipmap.f2l6 to "y L' U' L U L' U' L\n" +
+                "或 y' (R' U' R U) (R' U' R)",
+        R.mipmap.f2l7 to "(R U' R' U) (R U' R')",
+        R.mipmap.f2l8 to "(R U' R' U) (R U2' R') U (R U' R')\n" +
+                "如果左前为空槽可做\n" +
+                "u' (R U R' U') (R U R') u\n" +
+                "如果右后为空槽可做\n" +
+                "u (R U R' U') (R U R') u'",
+        R.mipmap.f2l9 to "(R U' R' U) d (R' U' R U') (R' U R)",
+        R.mipmap.f2l10 to "y' (R' U R) U' (R' U R)\n" +
                 "或 (R U R' U') (F R' F' R)",
-        R.mipmap.f2l11 to "(R U R' U')(R U R')",
-        R.mipmap.f2l12 to "(R U R' U')(R U R' U')(R U R')\n" +
-                "\n" +
-                "或 (U R U' R')(U R U' R')(U R U' R')",
+        R.mipmap.f2l11 to "(R U R' U') (R U R')",
+        R.mipmap.f2l12 to "(R U R' U') (R U R' U') (R U R')\n" +
+                "或 (U R U' R') (U R U' R') (U R U' R')",
         R.mipmap.f2l13 to "(R U' R') d (R' U R)",
         R.mipmap.f2l14 to "y' (R' U2 R) U (R' U' R)",
         R.mipmap.f2l15 to "y' U' (R' U2 R) U' (R' U R)",
         R.mipmap.f2l16 to "y' U2 (R' U' R U') (R' U R)\n" +
-                "\n" +
-                "或 y' (R' U R) U2 (R' U' R)　",
+                "或 y' (R' U R) U2 (R' U' R)",
         R.mipmap.f2l17 to "(R U R') d (R' U R U') (R' U R)",
         R.mipmap.f2l18 to "U2 R2 U2 (R' U' R U') R2\n" +
-                "\n" +
-                "或 (R U R' U') U' (R U R' U')(R U R')",
-        R.mipmap.f2l19 to "U2 (R U R' U)(R U' R')\n" +
-                "\n" +
-                "或 (R U' R') U2 (R U R')\n" +
-                "后一种解法就是视频讲解里说的近端异色",
-        R.mipmap.f2l2 to "U (R U' R') U' (F' U F)",
+                "或 (R U R' U') U' (R U R' U') (R U R')",
+        R.mipmap.f2l19 to "U2 (R U R' U) (R U' R')\n" +
+                "或 (R U' R') U2 (R U R')\n",
         R.mipmap.f2l20 to "U R U2 R2' (F R F')\n" +
-                "此公式最后是第4种基本情况, 用 R' F R F'插入。\n" +
-                "\n" +
-                "当然也可以用\n" +
-                "U (R U2 R') U (R U' R')",
+                "或 U (R U2 R') U (R U' R')",
         R.mipmap.f2l21 to "(R U2' R') U' (R U R')",
         R.mipmap.f2l22 to "(U' R U' R') U2 (R U' R')",
         R.mipmap.f2l23 to "(U' R U R') d (R' U' R)",
-        R.mipmap.f2l24 to "d(R'U R U')(R'U'R)\n" +
-                "\n" +
+        R.mipmap.f2l24 to "d (R' U R U') (R' U' R)\n" +
                 "如果右后槽为空槽可做\n" +
-                "(R' U R)(F' U' F)",
+                "(R' U R) (F' U' F)",
         R.mipmap.f2l25 to "y' (R' U' R)\n" +
-                "\n" +
                 "或 F' U' F",
-        R.mipmap.f2l26 to "U y' (R'U'R U')(R'U'R)\n" +
-                "\n" +
+        R.mipmap.f2l26 to "U y' (R' U' R U') (R' U' R)\n" +
                 "如果右后槽为空槽可做\n" +
                 "(R' U' R) (F' U' F)\n" +
-                "\n" +
                 "如果左前为空槽可做\n" +
                 "F U' F2' U' F",
         R.mipmap.f2l27 to "U' (R U2' R') d (R' U' R)\n" +
-                "\n" +
                 "如果左前为空槽可做\n" +
                 "F U2 F2' U' F",
         R.mipmap.f2l28 to "y' (R' U R U') d' (R U R')\n" +
-                "\n" +
                 "或 M U L F' L' U' M'",
         R.mipmap.f2l29 to "U' (R U2' R') U2 (R U' R')\n" +
-                "\n" +
                 "如果左前为空槽可做\n" +
-                "F U2 F' (U R U'R')",
-        R.mipmap.f2l2_1 to "F r U r' F'\n" +
-                "\n" +
-                "或 U' D F' U F D'",
-        R.mipmap.f2l2_2 to "U' D' F' U F D",
-        R.mipmap.f2l3 to "U' (F' U F) U (R U' R')",
+                "F U2 F' (U R U' R')",
         R.mipmap.f2l30 to "(U' R U R') U2 (R U' R')\n" +
-                "\n" +
                 "如果左前为空槽可做\n" +
-                "F U F' U R U'R'",
-        R.mipmap.f2l31 to "U R U'R'\n" +
-                "\n" +
+                "F U F' U R U' R'",
+        R.mipmap.f2l31 to "U R U' R'\n" +
                 "或 R' F R F'",
         R.mipmap.f2l32 to "U' (R U2' R') U (R U R')\n" +
-                "\n" +
                 "或 d (R' U R) U2 (R' U R)",
-        R.mipmap.f2l33 to "d (R' U' R) d'(R U R')",
-        R.mipmap.f2l34 to "y'U'(R'U R)\n" +
-                "\n" +
+        R.mipmap.f2l33 to "d (R' U' R) d' (R U R')",
+        R.mipmap.f2l34 to "y' U' (R' U R)\n" +
                 "或 F R' F' R",
         R.mipmap.f2l35 to "d (R' U' R) U2' (R' U R)\n" +
-                "\n" +
                 "如果右后槽为空槽可做\n" +
-                "(R' U' R) y'U'(R'U R)",
+                "(R' U' R) y' U' (R' U R)",
         R.mipmap.f2l35_1 to "y R' F R F' L' U' L",
         R.mipmap.f2l36 to "d (R' U2 R) U2' (R' U R)\n" +
-                "\n" +
                 "如果右后槽为空槽可做\n" +
-                "(R' U2 R) y' U'(R'U R)",
-        R.mipmap.f2l36_1 to "(r U' r' F)(R U R')",
+                "(R' U2 R) y' U' (R' U R)",
+        R.mipmap.f2l36_1 to "(r U' r' F) (R U R')",
         R.mipmap.f2l37 to "(R U' R' U) d (R' U' R)",
         R.mipmap.f2l38 to "d (R' U2 R) d' (R U R')\n" +
-                "\n" +
                 "如果右后槽为空槽可做\n" +
                 "R' U2 R2 U R'",
-        R.mipmap.f2l39 to "U'(R U R' U)(R U R')\n" +
-                "\n" +
+        R.mipmap.f2l39 to "U' (R U R' U) (R U R')\n" +
                 "如果右后槽为空槽可做\n" +
                 "R' U R2 U R'\n" +
-                "\n" +
                 "如果左前为空槽可做\n" +
-                "(F U F' ) (R U R')",
-        R.mipmap.f2l3_1 to "U D R U' R' D'",
-        R.mipmap.f2l3_2 to "U D' R U' R' D",
-        R.mipmap.f2l4 to "(R U' R') U' (R U R') U2 (R U' R')\n" +
-                "\n" +
-                "如果左前为空槽可做\n" +
-                "u' (R U' R' U)(R U' R') u\n" +
-                "\n" +
-                "如果右后为空槽可做\n" +
-                "u (R U' R' U)(R U' R') u'",
+                "(F U F') (R U R')",
         R.mipmap.f2l40 to "(R U R')",
-        R.mipmap.f2l41 to "U'(R U'R'U)(R U R')\n" +
-                "\n" +
+        R.mipmap.f2l41 to "U' (R U' R' U) (R U R')\n" +
                 "如果左前为空槽可做\n" +
-                "(F U' F') (R U R')",
-        R.mipmap.f2l5 to "(R U' R' U') (R U' R')U (F' U' F)",
-        R.mipmap.f2l6 to "y L' U' L U L' U' L\n" +
-                "\n" +
-                "或 y' (R' U' R U)(R' U' R)",
-        R.mipmap.f2l7 to "(R U' R' U)(R U' R')",
-        R.mipmap.f2l8 to "(R U' R' U)(R U2' R') U (R U' R')\n" +
-                "\n" +
-                "如果左前为空槽可做\n" +
-                "u' (R U R' U')(R U R') u\n" +
-                "\n" +
-                "如果右后为空槽可做\n" +
-                "u (R U R' U')(R U R') u'",
-        R.mipmap.f2l9 to "(R U' R' U) d (R' U' R U') (R' U R)"
+                "(F U' F') (R U R')"
     )
 
     // F2L临时List
@@ -343,16 +309,16 @@ class MainActivity : AppCompatActivity() {
 
     // OLL公式资源
     private val ollFormulas = mapOf(
-        R.mipmap.o1 to "(R U'U') (R2' F R F') U2 (R' F R F')",
+        R.mipmap.o1 to "(R U2') (R2' F R F') U2 (R' F R F')",
         R.mipmap.o2 to "F (R U R' U') F' f (R U R' U') f'",
-        R.mipmap.o3 to "f(R U R' U')f' U' F(R U R' U')F'",
-        R.mipmap.o4 to "f(R U R' U')f' U F(R U R' U')F'",
+        R.mipmap.o3 to "f (R U R' U') f' U' F (R U R' U') F'",
+        R.mipmap.o4 to "f (R U R' U') f' U F (R U R' U') F'",
         R.mipmap.o5 to "(r' U2) (R U R'U) r",
-        R.mipmap.o6 to "(r U'U') (R' U' R U' r')",
-        R.mipmap.o7 to "r U R' U R U U r'",
-        R.mipmap.o8 to "r' U' R U' R' U2 r",
+        R.mipmap.o6 to "(r U2') (R' U' R U') r'",
+        R.mipmap.o7 to "r U R' U R U2 r'",
+        R.mipmap.o8 to "r' U' R U' R' U2' r",
         R.mipmap.o9 to "(R U R' U') (R' F) (R2 U R' U') F'",
-        R.mipmap.o10 to "(R U R'U)(R'F R F') (R U'U'R')",
+        R.mipmap.o10 to "(R U R' U) (R' F R F') (R U' U'R')",
         R.mipmap.o11 to "(r U R' U) (R' F R F') R U2 r'",
         R.mipmap.o12 to "F (R U R' U') F' U F (R U R' U') F'",
         R.mipmap.o13 to "F (U R U') (R2 F') (R U R U' R')",
@@ -361,39 +327,39 @@ class MainActivity : AppCompatActivity() {
         R.mipmap.o16 to "(r U r') (R U R' U') (r U' r')",
         R.mipmap.o17 to "(R U R' U) (R' F R F') U2 (R' F R F')",
         R.mipmap.o18 to "F (R U R' U) y' (R' U2) (R' F R F')",
-        R.mipmap.o19 to "(M下 U)(R U R' U') M上 (R' F R F')",
-        R.mipmap.o20 to "(r' R U) (R U R'U') (r2 R2') (U R U' r')",
-        R.mipmap.o21 to "(R U U R' U') (R U R' U') (R U' R')",
-        R.mipmap.o22 to "R U'U' (R2' U') (R2 U') R2' U2 R",
-        R.mipmap.o23 to "(R2 D') (R U'U') (R' D) (R U'U' R)",
+        R.mipmap.o19 to "(M' U) (R U R' U') M (R' F R F')",
+        R.mipmap.o20 to "(M' U) (R U R'U') M2 (U R U' r')",
+        R.mipmap.o21 to "(R U2' R' U') (R U R' U') (R U' R')",
+        R.mipmap.o22 to "R U2' (R2' U') (R2 U') R2' U2 R",
+        R.mipmap.o23 to "(R2 D') (R U2') (R' D) (R U2' R)",
         R.mipmap.o24 to "(r U R' U') (r' F R F')",
         R.mipmap.o25 to "F'(r U R' U') (r' F R)",
-        R.mipmap.o26 to "R U' U' R' U' R U' R'",
+        R.mipmap.o26 to "R U2' R' U' R U' R'",
         R.mipmap.o27 to "R' U2 R U R' U R",
         R.mipmap.o28 to "(r U R' U') (r' R) (U R U' R')",
         R.mipmap.o29 to "(r U2 R' U' R U' r') (R' U2 R U R' U R)",
         R.mipmap.o30 to "(r' U2 R U R' U r) (R U2 R' U' R U' R')",
         R.mipmap.o31 to "(R' U' F) (U R U') (R' F' R)",
-        R.mipmap.o32 to "(R U)(B' U') (R' U R B R')",
+        R.mipmap.o32 to "(R U) (B' U') (R' U R B R')",
         R.mipmap.o33 to "(R U R' U') (R' F R F')",
         R.mipmap.o34 to "(R U R' U') x D' (R' U R) E'",
-        R.mipmap.o35 to "R U'U' (R2' F R F') (R U'U'R')",
-        R.mipmap.o36 to "(R'U'R U') (R'U R U) (l U'R'U)",
-        R.mipmap.o37 to "F (R U' R'U') (R U R' F')",
-        R.mipmap.o38 to "(R U R'U) (R U'R'U') (R'F R F')",
+        R.mipmap.o35 to "R U2' (R2' F R F') (R U2' R')",
+        R.mipmap.o36 to "(R' U' R U') (R' U R U) (l U' R' U)",
+        R.mipmap.o37 to "F (R U' R' U') (R U R' F')",
+        R.mipmap.o38 to "(R U R' U) (R U' R' U') (R' F R F')",
         R.mipmap.o39 to "L F' (L' U' L U) F (U' L')",
         R.mipmap.o40 to "R' F (R U R'U') F' (U R)",
         R.mipmap.o41 to "(R U R' U R U2 R') F (R U R' U') F'",
-        R.mipmap.o42 to "(R' U' R U' R' U2 R) F (R U R' U') F'",
+        R.mipmap.o42 to "(R' U' R U' R' U2' R) F (R U R' U') F'",
         R.mipmap.o43 to "f' (L' U' L U) f",
         R.mipmap.o44 to "f (R U R' U') f'",
         R.mipmap.o45 to "F (R U R' U') F'",
         R.mipmap.o46 to "(R' U') (R' F R F') (U R)",
         R.mipmap.o47 to "F' (L' U' L U)2 F",
         R.mipmap.o48 to "F (R U R' U')2 F'",
-        R.mipmap.o49 to "(R B')(R2 F)(R2 B) (R2 F') R",
+        R.mipmap.o49 to "(R B') (R2 F) (R2 B) (R2 F') R",
         R.mipmap.o50 to "(R' F) (R2 B') (R2 F') (R2 B) R'",
-        R.mipmap.o51 to "f(R U R' U')2 f'",
+        R.mipmap.o51 to "f (R U R' U')2 f'",
         R.mipmap.o52 to "(R' U' R U') (R' U) y' (R' U R B)",
         R.mipmap.o53 to "r' U2 (R U R' U') (R U R' U) r",
         R.mipmap.o54 to "r U (R' U R U')2 U' r'",
@@ -465,27 +431,32 @@ class MainActivity : AppCompatActivity() {
 
     // PLL公式资源
     private val pllFormulas = mapOf(
-        R.mipmap.a to "x' (R U'R) D2 (R' U R) D2 R2 x",
+        R.mipmap.a to "x' (R U' R) D2 (R' U R) D2 R2 x",
         R.mipmap.a1 to "x' R2 D2 (R' U' R) D2 (R' U R') x",
-        R.mipmap.e to "(R2 U R' U') y (R U R' U')2 (R U R') y' (R U' R2)",
-        R.mipmap.f to "U' (R'U R U') R2' b' x (R' U R) y' (R U R' U' R2)",
-        R.mipmap.g to "(R U R') y'(R2' u') (R U' R' U) (R' u R2)",
-        R.mipmap.g1 to "(R2' u') (R U' R) U (R' u R2') y (R U'R')",
-        R.mipmap.g2 to "(R' d' F) (R2' u R') U (R U' R) u' R2",
-        R.mipmap.g3 to "(R2' u R') (U R' U') (R u' R2') y' (R' U R)",
+        R.mipmap.e to "(R2 U R' U') y (R U R' U')2 (R U R')\n" +
+                "y' (R U' R2)",
+        R.mipmap.f to "U' (R' U R U') R2' b' x (R' U R)\n" +
+                "y' (R U R' U' R2)",
+        R.mipmap.g to "(R U R') y' (R2 u') (R U' R' U) (R' u R2)",
+        R.mipmap.g1 to "(R2 u') (R U' R U) (R' u R2) y (R U' R')",
+        R.mipmap.g2 to "(R' U' R) y (R2 u) (R' U R U') (R u' R2)",
+        R.mipmap.g3 to "(R2 u) (R' U R' U') (R u' R2) y' (R' U R)",
         R.mipmap.h to "M2 U M2 U2 M2 U M2",
-        R.mipmap.j to "(R U R'F') (R U R'U') (R'F R2 U'R'U')",
-        R.mipmap.j1 to "z (U' R D') (R2 U R' U') (R2 U) D R'",
-        R.mipmap.n to "z (U'R D') (R2 U R'U') z' (R U R') z (R2 U R') D R'",
-        R.mipmap.n1 to "z (R' U R') z' (R U2 L' U R') z (U R') z' (R U2 L' U R')",
-        R.mipmap.r to "(R' U2) (R U'U') (R' F R U R' U') (R' F' R2 U')",
-        R.mipmap.r1 to "(R U'U') (R' U2) (R B' R' U') (R U R B) R2' U",
+        R.mipmap.j to "(R U R' F') (R U R' U') (R' F R2 U' R' U')",
+        R.mipmap.j1 to "(L' U' L F) (L' U' L U) (L F' L2' U L U)",
+        R.mipmap.n to "z (U' R D') (R2 U R' U')\n" +
+                "z' (R U R') z (R2 U R') D R'",
+        R.mipmap.n1 to "z (R' U R') z' (R U2' L' U R')\n" +
+                "z (U R') z' (R U2 L' U R')",
+        R.mipmap.r to "(R' U2) (R U2') (R' F R U R' U') (R' F' R2 U')",
+        R.mipmap.r1 to "(R U2') (R' U2) (R B' R' U') (R U R B) R2' U",
         R.mipmap.t to "(R U R' U') (R' F R2 U' R' U') (R U R' F')",
-        R.mipmap.u to "(R2' U) (R U R' U') (R' U') (R' U R')",
-        R.mipmap.u1 to "(R U' R) U (R U R U') (R' U' R2)",
+        R.mipmap.u to "(R2 U R U) (R' U' R' U') (R' U R')",
+        R.mipmap.u1 to "(R U' R) (U R U R) (U' R' U' R2')",
         R.mipmap.v to "(R' U R' d') (R' F') (R2 U' R' U) (R' F R F)",
-        R.mipmap.y to "F (R U'R' U') (R U R' F') (R U R' U') (R' F R F')",
-        R.mipmap.z to "(M2 U M2 U) (M上 U2) (M2 U2) (M上 U2)"
+        R.mipmap.y to "F (R U' R' U') (R U R' F')\n" +
+                "(R U R' U') (R' F R F')",
+        R.mipmap.z to "(M2 U M2 U) (M' U2) (M2 U2) (M' U2)"
     )
 
     // PLL临时列表
