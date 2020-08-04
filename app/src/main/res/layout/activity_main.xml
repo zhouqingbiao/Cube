@@ -6,41 +6,86 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Switch
+        android:id="@+id/formulaSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:onClick="formulaSwitch"
+        android:text="@string/formula"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
-        android:id="@+id/imageViewF2L"
+        android:id="@+id/f2lImageView"
         android:layout_width="128dp"
         android:layout_height="128dp"
         android:layout_marginBottom="32dp"
         android:contentDescription="@string/f2l"
-        android:onClick="randomImageF2L"
-        app:layout_constraintBottom_toTopOf="@+id/imageViewOLL"
+        android:onClick="f2lImageRandom"
+        app:layout_constraintBottom_toTopOf="@+id/ollImageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/imageViewOLL"
+        android:id="@+id/ollImageView"
         android:layout_width="128dp"
         android:layout_height="128dp"
         android:contentDescription="@string/oll"
-        android:onClick="randomImageOLL"
+        android:onClick="ollImageRandom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageViewPLL"
+        android:id="@+id/pllImageView"
         android:layout_width="128dp"
         android:layout_height="128dp"
         android:layout_marginTop="32dp"
         android:contentDescription="@string/pll"
-        android:onClick="randomImagePLL"
+        android:onClick="pllImageRandom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewOLL" />
+        app:layout_constraintTop_toBottomOf="@+id/ollImageView" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/f2lFormulasTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#42A5F5"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/ollImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/f2lImageView" />
+
+    <TextView
+        android:id="@+id/ollFormulasTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#42A5F5"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/pllImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ollImageView" />
+
+    <TextView
+        android:id="@+id/pllFormulasTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#42A5F5"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/noticeTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pllImageView" />
+
+    <TextView
+        android:id="@+id/noticeTextView"
         android:layout_width="256dp"
         android:layout_height="32dp"
         android:layout_marginTop="32dp"
@@ -50,5 +95,6 @@
         android:typeface="monospace"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewPLL" />
+        app:layout_constraintTop_toBottomOf="@+id/pllImageView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

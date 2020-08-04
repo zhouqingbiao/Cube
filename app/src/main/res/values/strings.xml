@@ -3,4 +3,8 @@
     <string name="f2l">F2L</string>
     <string name="oll">OLL</string>
     <string name="pll">PLL</string>
+    <string name="f2lNotice">F2L一组训练完毕！</string>
+    <string name="ollNotice">OLL一组训练完毕！</string>
+    <string name="pllNotice">PLL一组训练完毕！</string>
+    <string name="formula">公式</string>
 </resources>
