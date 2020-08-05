@@ -318,7 +318,7 @@ class MainActivity : AppCompatActivity() {
         R.mipmap.o7 to "r U R' U R U2 r'",
         R.mipmap.o8 to "r' U' R U' R' U2' r",
         R.mipmap.o9 to "(R U R' U') (R' F) (R2 U R' U') F'",
-        R.mipmap.o10 to "(R U R' U) (R' F R F') (R U' U'R')",
+        R.mipmap.o10 to "(L' U' L U) (L F') (L2' U' L U) F",
         R.mipmap.o11 to "(r U R' U) (R' F R F') R U2 r'",
         R.mipmap.o12 to "F (R U R' U') F' U F (R U R' U') F'",
         R.mipmap.o13 to "F (U R U') (R2 F') (R U R U' R')",
@@ -431,11 +431,11 @@ class MainActivity : AppCompatActivity() {
 
     // PLL公式资源
     private val pllFormulas = mapOf(
-        R.mipmap.a to "x' (R U' R) D2 (R' U R) D2 R2 x",
+        R.mipmap.a to "x' (R U' R) D2 (R' U R) D2 R2' x",
         R.mipmap.a1 to "x' R2 D2 (R' U' R) D2 (R' U R') x",
         R.mipmap.e to "(R2 U R' U') y (R U R' U')2 (R U R')\n" +
                 "y' (R U' R2)",
-        R.mipmap.f to "U' (R' U R U') R2' b' x (R' U R)\n" +
+        R.mipmap.f to "U' (R' U R U') R2 b' x (R' U R)\n" +
                 "y' (R U R' U' R2)",
         R.mipmap.g to "(R U R') y' (R2 u') (R U' R' U) (R' u R2)",
         R.mipmap.g1 to "(R2 u') (R U' R U) (R' u R2) y (R U' R')",
@@ -447,7 +447,7 @@ class MainActivity : AppCompatActivity() {
         R.mipmap.n to "z (U' R D') (R2 U R' U')\n" +
                 "z' (R U R') z (R2 U R') D R'",
         R.mipmap.n1 to "z (R' U R') z' (R U2' L' U R')\n" +
-                "z (U R') z' (R U2 L' U R')",
+                "z (U R') z' (R U2' L' U R')",
         R.mipmap.r to "(R' U2) (R U2') (R' F R U R' U') (R' F' R2 U')",
         R.mipmap.r1 to "(R U2') (R' U2) (R B' R' U') (R U R B) R2' U",
         R.mipmap.t to "(R U R' U') (R' F R2 U' R' U') (R U R' F')",
@@ -456,7 +456,7 @@ class MainActivity : AppCompatActivity() {
         R.mipmap.v to "(R' U R' d') (R' F') (R2 U' R' U) (R' F R F)",
         R.mipmap.y to "F (R U' R' U') (R U R' F')\n" +
                 "(R U R' U') (R' F R F')",
-        R.mipmap.z to "(M2 U M2 U) (M' U2) (M2 U2) (M' U2)"
+        R.mipmap.z to "(M2 U M2 U) (M U2) (M2 U2) (M U2)"
     )
 
     // PLL临时列表

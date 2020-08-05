@@ -7,4 +7,5 @@
     <string name="ollNotice">OLL一组训练完毕！</string>
     <string name="pllNotice">PLL一组训练完毕！</string>
     <string name="formula">公式</string>
+    <string name="mark">x-->R\ny-->U\nz-->F\nM-->Rr\u0027\nE-->Uu\u0027\nS-->Bb\u0027</string>
 </resources>
