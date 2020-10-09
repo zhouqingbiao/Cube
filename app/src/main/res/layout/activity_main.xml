@@ -98,16 +98,27 @@
         app:layout_constraintTop_toBottomOf="@+id/pllImageView" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/notationTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:gravity="center"
-        android:text="@string/mark"
         android:textColor="#EF5350"
         android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notationSwitch" />
+
+    <Switch
+        android:id="@+id/notationSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="switchMoveNotation"
+        android:text="@string/notation"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

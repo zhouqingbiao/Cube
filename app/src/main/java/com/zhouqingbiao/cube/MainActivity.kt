@@ -494,4 +494,14 @@ class MainActivity : AppCompatActivity() {
             findViewById<TextView>(R.id.noticeTextView).text = null
         }
     }
+
+    // 书写公式开关
+    fun switchMoveNotation(view: View) {
+        // 检查Switch开关并进行相应设置
+        if (findViewById<Switch>(R.id.notationSwitch).isChecked) {
+            findViewById<TextView>(R.id.notationTextView).text = getText(R.string.notationText)
+        } else {
+            findViewById<TextView>(R.id.notationTextView).text = null
+        }
+    }
 }
