@@ -2,6 +2,7 @@ package com.zhouqingbiao.cube
 
 import android.os.Bundle
 import android.view.View
+import android.view.WindowManager
 import android.widget.ImageView
 import android.widget.Switch
 import android.widget.TextView
@@ -11,6 +12,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        // 解释: 给window设置一个标记 - 保持屏幕常亮
+        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
         // 初始化就随机显示CFOP图片、赋予tag、从MutableList中移除初始CFOP信息
         val f2lTemp = f2lTemps.random()
